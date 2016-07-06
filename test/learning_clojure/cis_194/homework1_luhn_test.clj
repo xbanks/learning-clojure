@@ -8,6 +8,10 @@
     (is (luhn 5594589764218858))
     (is (not (luhn 1234567898765432)))))
 
+(deftest to-digits-test
+  (testing "number to a list of digits"
+    (is (= (to-digits 123) '(1 2 3)))))
+
 (deftest to-rev-digits-test
   (testing "reversing digits"
     (is (= (to-rev-digits 123) '(3 2 1)))
